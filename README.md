@@ -1,4 +1,4 @@
-# LATIPIA.ID
+# LATOPIA.ID
 Aplikasi toko online adalah proses transaksi jual beli dan pemesanan secara online. Ini versinya 1.1
 <br/><br/>
 Ada beberapa fitur front end terdapat dalam aplikasi toko online : <br/>

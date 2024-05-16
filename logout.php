@@ -1,11 +1,9 @@
 <?php
 session_start();
 
+setcookie('user_id','', time() - 3600);
 session_destroy();
 
-setcookie('email','', time() -3600);
-
-header('location: /miistore/');
-
+echo "<script>document.location = '/index.php'; </script>";
 ?>
 

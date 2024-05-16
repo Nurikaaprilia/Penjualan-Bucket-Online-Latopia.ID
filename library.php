@@ -1,5 +1,4 @@
 <?php
-
 function autoNumber($id, $table){
 	include "connect.php";
 	$qry = 'SELECT MAX(RIGHT('.$id.', 4)) as max_id FROM '.$table.' ORDER BY '.$id;
@@ -12,16 +11,7 @@ function autoNumber($id, $table){
 	return $new_code;
  }
  
- function toMoney($val, $symbol='$', $r = 2){
-	$n = $val;
-	$c = is_float($n) ? 1 : number_format($n, $r);
-	$d = '.';
-	$t = ',';
-	$sign = ($n < 0) ? '-' : '';
-	$i = $n = number_format(abs($n),$r);
-	$j = (($j = strlen($i)) > 3) ? $j % 3 : 0;
-							
-	return $symbol.$sign.($j ? substr($i, 0, $j) + $t : '').preg_replace('/(\d{3})(?=\d)/',"$i" + $t, substr($i, $j));
-}
-
-?>
+ function fixdate($date) {
+	 return date('d-m-Y', strtotime($date));
+ }
+ ?>
